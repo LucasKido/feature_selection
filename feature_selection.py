@@ -238,7 +238,9 @@ class Classification_Evaluator:
         return self.summary
     
     def selected_features(self, chosen=2):
-
+        """ Return selected features depending o the number of methods that were chosen
+        """
+        
         self.select_features = (
             self.summary[self.summary['chosen']>=chosen]['features']
             .values
