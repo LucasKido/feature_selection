@@ -236,3 +236,12 @@ class Classification_Evaluator:
         self.parse_summary()
         
         return self.summary
+    
+    def selected_features(self, chosen=2):
+
+        self.select_features = (
+            self.summary[self.summary['chosen']>=chosen]['features']
+            .values
+        )
+
+        return self.select_features
